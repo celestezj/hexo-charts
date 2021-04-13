@@ -55,14 +55,15 @@ function postsChart () {
 
   return `
   <script id="postsChart">
-    let postsChart = echarts.init(document.getElementById('posts-chart'));
-    let postsOption = {
+    var postsChart = echarts.init(document.getElementById('posts-chart'));
+    var postsOption = {
         title: {
             text: '文章发布统计图',
-            top: -5,
+            top: -2,
             x: 'center'
         },
         tooltip: {
+            transitionDuration: 0,
             trigger: 'axis'
         },
         xAxis: {
@@ -101,6 +102,7 @@ function postsChart () {
         ]
     };
     postsChart.setOption(postsOption);
+    window.addEventListener("resize", () => { postsChart.resize(); });
     </script>`
 }
 
@@ -123,14 +125,14 @@ function tagsChart (dataLength = 10) {
 
   return `
   <script id="tagsChart">
-    let tagsChart = echarts.init(document.getElementById('tags-chart'));
-    let tagsOption = {
+    var tagsChart = echarts.init(document.getElementById('tags-chart'));
+    var tagsOption = {
         title: {
             text: 'Top${dataLength}标签统计图',
-            top: -5,
+            top: -2,
             x: 'center'
         },
-        tooltip: {},
+        tooltip: {transitionDuration: 0},
         xAxis: [
             {
                 type: 'category',
@@ -170,6 +172,7 @@ function tagsChart (dataLength = 10) {
         ]
     };
     tagsChart.setOption(tagsOption);
+    window.addEventListener("resize", () => { tagsChart.resize(); });
     </script>`
 }
 
@@ -183,14 +186,15 @@ function categoriesChart () {
 
   return `
   <script id="categoriesChart">
-    let categoriesChart = echarts.init(document.getElementById('categories-chart'));
-    let categoriesOption = {
+    var categoriesChart = echarts.init(document.getElementById('categories-chart'));
+    var categoriesOption = {
         title: {
             text: '文章分类统计图',
             top: -4,
             x: 'center'
         },
         tooltip: {
+            transitionDuration: 0,
             trigger: 'item',
             formatter: "{a} <br/>{b} : {c} ({d}%)"
         },
@@ -212,5 +216,6 @@ function categoriesChart () {
         ]
     };
     categoriesChart.setOption(categoriesOption);
+    window.addEventListener("resize", () => { categoriesChart.resize(); });
     </script>`
 }
