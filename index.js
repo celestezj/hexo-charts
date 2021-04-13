@@ -59,8 +59,15 @@ function postsChart () {
     var postsOption = {
         title: {
             text: '文章发布统计图',
-            top: -2,
-            x: 'center'
+            //top: -2,
+            textStyle: {
+                fontFamily: 'Arial, Verdana, sans...',
+                fontSize: 12,
+                fontStyle: 'normal',
+                fontWeight: 'normal',
+            },
+            x: 'center',
+            y: 'bottom'
         },
         tooltip: {
             transitionDuration: 0,
@@ -129,8 +136,15 @@ function tagsChart (dataLength = 10) {
     var tagsOption = {
         title: {
             text: 'Top${dataLength}标签统计图',
-            top: -2,
-            x: 'center'
+            //top: -2,
+            textStyle: {
+                fontFamily: 'Arial, Verdana, sans...',
+                fontSize: 12,
+                fontStyle: 'normal',
+                fontWeight: 'normal',
+            },
+            x: 'center',
+            y: 'bottom'
         },
         tooltip: {transitionDuration: 0},
         xAxis: [
@@ -190,8 +204,15 @@ function categoriesChart () {
     var categoriesOption = {
         title: {
             text: '文章分类统计图',
-            top: -4,
-            x: 'center'
+            //top: -4,
+            textStyle: {
+                fontFamily: 'Arial, Verdana, sans...',
+                fontSize: 12,
+                fontStyle: 'normal',
+                fontWeight: 'normal',
+            },
+            x: 'center',
+            y: 'bottom'
         },
         tooltip: {
             transitionDuration: 0,
