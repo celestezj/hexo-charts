@@ -109,7 +109,6 @@ function postsChart () {
         ]
     };
     postsChart.setOption(postsOption);
-    window.addEventListener("resize", () => { postsChart.resize(); });
     </script>`
 }
 
@@ -186,7 +185,6 @@ function tagsChart (dataLength = 10) {
         ]
     };
     tagsChart.setOption(tagsOption);
-    window.addEventListener("resize", () => { tagsChart.resize(); });
     </script>`
 }
 
@@ -237,6 +235,5 @@ function categoriesChart () {
         ]
     };
     categoriesChart.setOption(categoriesOption);
-    window.addEventListener("resize", () => { categoriesChart.resize(); });
     </script>`
 }
